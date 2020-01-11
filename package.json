@@ -5,14 +5,13 @@
   "scripts": {
     "heroku-postbuild": "yarn build",
     "dev": "razzle start",
-    "start": "node ./node_modules/.bin/pm2 start --env=production && pm2 logs all",
+    "start": "NODE_ENV=production node build/server.js",
     "build": "rm -rf build && razzle build",
     "test": "razzle test --env=jsdom"
   },
   "dependencies": {
     "babel-plugin-react-native-web": "^0.12.0-rc.1",
     "express": "^4.17.1",
-    "pm2": "^4.2.1",
     "razzle": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
