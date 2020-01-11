@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const razzleHeroku = require('razzle-heroku');
 
 module.exports = {
   modify(config, { target, dev }, webpack) {
@@ -19,6 +20,9 @@ module.exports = {
       );
     config.resolve.modules.unshift(path.resolve(__dirname, './src'));
     delete config.externals;
+
+    /* HEROKU compability */
+    config = razzleHeroku(config, { target, dev }, webpack);
 
     return config;
   },
