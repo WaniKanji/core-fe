@@ -12,6 +12,10 @@ server.listen(process.env.PORT || 3000, error => {
   }
 
   console.log('🚀 started');
+
+  if (process.send) {
+    process.send('ready');
+  }
 });
 
 if (module.hot) {
