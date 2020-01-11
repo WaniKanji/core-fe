@@ -20,5 +20,9 @@
     "react-router-dom": "^5.1.2",
     "react-signature-canvas": "^1.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": "^10.16.0",
+    "yarn": "^1.13.0"
+  }
 }
