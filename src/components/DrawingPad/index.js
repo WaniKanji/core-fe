@@ -12,7 +12,7 @@ const DrawingPad = () => {
     // Refactor this post
     var xhr = new XMLHttpRequest();
     const sendData = JSON.stringify({ imageData: canvasData });
-    const url = 'http://localhost:8000/api/lesson/recognize/';
+    const url = 'http://wanikanji-core-api.herokuapp.com/api/lesson/recognize/';
     xhr.onreadystatechange = function(err) {
       if (xhr.readyState == 4 && xhr.status == 200){
         setRecognizedText(xhr.responseText.replace(/['"]+/g, ''));
