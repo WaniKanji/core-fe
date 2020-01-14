@@ -6,7 +6,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <DrawingPad />
-      <Text>aab</Text>
     </View>
   );
 }
